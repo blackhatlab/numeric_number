@@ -1,1 +1,3 @@
-# <h1>numeric_number</h1>
+<h1>Numeric Number Generator</h1>
+
+<h2>How to install?</h2>
