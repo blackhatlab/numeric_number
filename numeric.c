@@ -11,10 +11,11 @@ int main (int argc, char *argv [])
     
     FILE *out;
     
-    printf ("                                   NUMERIC                           ");
-    printf ("                                    NUMBER                           ");
-    printf ("                                  GENERATOR                          ");
-
+    printf ("                                   NUMERIC                           \n");
+    printf ("                                    NUMBER                           \n");
+    printf ("                                  GENERATOR                          \n");
+    printf ("Press Enter to start\n");
+    getchar ();
     if ((out = fopen ("numbers.txt", "a")) == 0) {
 	printf ("Can't open file! Try to run it as root\n");
 	return 0;
