@@ -8,8 +8,12 @@ int main (int argc, char *argv [])
         printf ("Usage: numeric <start country code>\n\n"); 
         return 0;
     }
-
+    
     FILE *out;
+    
+    printf ("                                   NUMERIC                           ");
+    printf ("                                    NUMBER                           ");
+    printf ("                                  GENERATOR                          ");
 
     if ((out = fopen ("numbers.txt", "a")) == 0) {
 	printf ("Can't open file! Try to run it as root\n");
