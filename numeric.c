@@ -9,9 +9,16 @@ int main (int argc, char *argv [])
         return 0;
     }
 
+    FILE *out;
+
+    if ((out = fopen ("numbers.txt", "a")) == 0) {
+	printf ("Can't open file! Try to run it as root\n");
+	return 0;
+    }
+
     for (country_code = atoi (argv [1]); country_code <= 193; country_code++)
     {
-        for (oper = 100; oper <= 999; oper++)
+        for (oper = 500; oper <= 999; oper++)
         {
             for (i = 100; i <= 999; i++)
             {
@@ -20,11 +27,14 @@ int main (int argc, char *argv [])
                     for (d = 10; d <= 99; d++)
                     {
                         printf ("%d-%d-%d-%d-%d\n", country_code, oper, i, j, d);
+			fprintf (out, "%d-%d-%d-%d-%d\n", country_code, oper, i, j, d);
                     }
                 }
             }
         }
     }
+
+    fclose (out);
 
     return 0;
 }
